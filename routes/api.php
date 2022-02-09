@@ -23,3 +23,5 @@ Route::get('/', 'App\Http\Controllers\BookController@index');
 Route::post('/create', 'App\Http\Controllers\BookController@create');
 
 Route::delete('/delete/{id}', 'App\Http\Controllers\BookController@destroy');
+
+Route::put('/update/{id}', 'App\Http\Controllers\BookController@update');

@@ -87,7 +87,14 @@ class BookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $objPessoas = $this->objPessoa->get();
+        $pessoa = $objPessoas->find($id);
+        $pessoa->NOME = $request->NOME;
+        $pessoa->SOBRENOME = $request->SOBRENOME;
+        $pessoa->DATA_DE_NASCIMENTO = $request->DATA_DE_NASCIMENTO;
+        $pessoa->NATURALIDADE = $request->NATURALIDADE;
+        $pessoa->HOBBY = $request->HOBBY;
+        $pessoa->save();
     }
 
     /**
